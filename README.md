@@ -32,17 +32,8 @@ Train a Model in Google Colab
   - notebooks/RealEstatePriceTraining.ipynb
 - Typical workflow:
   1) Generate data.jsonl by running the crawler.
-  2) Open the notebook in Google Colab (File → Upload notebook) or upload the file to your Drive and open from there.
-  3) Provide the data file to Colab using one of these options:
-     - Upload data.jsonl directly into Colab’s /content
-     - Mount Google Drive and place data.jsonl in /MyDrive
-  4) Run all cells to:
+  2) Open the notebook in [Google Colab](https://colab.research.google.com/drive/1gQptk3-6Ylbt-ah7wriahKsvOZ6lwyU6?usp=sharing) or upload the file to your Drive and open from there.
+  3) Run all cells to:
      - Load and clean the dataset (parses m², converts GPS DMS to decimals)
      - Train a baseline RandomForest model to predict price
      - Report RMSE and R²
-     - Save the trained model artifact (model.joblib) to /content or Drive
-
-Notes
-- The crawler is I/O bound and uses multiple workers; it continues running while new items are processed and written.
-- The notebook accepts either data.jsonl (preferred) or a JSON array file named data.json.
-
