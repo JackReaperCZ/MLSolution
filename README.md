@@ -15,7 +15,7 @@ Run the Crawler
 - Run:
   - dotnet run --project .\RealEstateCrawler\RealEstateCrawler.csproj
 - Output:
-  - The file data.jsonl is created/updated in the repository root: C:\Users\domca\Documents\MLSolution\data.jsonl
+  - The file data.jsonl is created/updated in the repository root: .\MLSolution\data.jsonl
 - Stop:
   - Press Ctrl+C in the terminal.
 
@@ -26,12 +26,6 @@ Data Format (JSON Lines)
   - price (number) — integer price in CZK
   - gpsX (string) — latitude in DMS format (e.g., 50°06'55"N)
   - gpsY (string) — longitude in DMS format (e.g., 14°17'19.2"E)
-
-Key Source Files
-- Program entry point: [Program.cs](file:///c:/Users/domca/Documents/MLSolution/RealEstateCrawler/Program.cs)
-- Scraper: [RemaxScraper.cs](file:///c:/Users/domca/Documents/MLSolution/RealEstateCrawler/RemaxScraper.cs)
-- Workers: [ListingWorker.cs](file:///c:/Users/domca/Documents/MLSolution/RealEstateCrawler/Worker/ListingWorker.cs), [DetailWorker.cs](file:///c:/Users/domca/Documents/MLSolution/RealEstateCrawler/Worker/DetailWorker.cs)
-- Storage (writer): [Storage.cs](file:///c:/Users/domca/Documents/MLSolution/RealEstateCrawler/Storage.cs)
 
 Train a Model in Google Colab
 - Location of the notebook in this repo:
