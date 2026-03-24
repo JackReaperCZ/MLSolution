@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FKLNIL8XguU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\domca\\Documents\\MLSolution\\RealEstateCrawler\\RealEstateCrawler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\domca\\.nuget\\packages\\htmlagilitypack\\1.12.4\\htmlagilitypack.1.12.4.nupkg.sha512"
+  ],
+  "logs": []
+}
