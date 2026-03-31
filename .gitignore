@@ -1,1 +1,5 @@
-dataset_ruze/
+ruze-app/node_modules/
+ruze-app/__pycache__/
+*.pyc
+.env
+ruze-app/dist/

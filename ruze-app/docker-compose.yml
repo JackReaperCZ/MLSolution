@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: ./backend
+    container_name: ruze-backend
+    volumes:
+      # Mount your model files here
+      - ./model:/app/model:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BACKEND_PORT=${BACKEND_PORT:-8000}
+    command: uvicorn main:app --host 0.0.0.0 --port ${BACKEND_PORT:-8000}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${BACKEND_PORT:-8000}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - BACKEND_PORT=${BACKEND_PORT:-8000}
+    container_name: ruze-frontend
+    ports:
+      - "${FRONTEND_PORT:-80}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes: {}
