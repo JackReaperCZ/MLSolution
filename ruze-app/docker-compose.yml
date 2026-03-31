@@ -2,6 +2,8 @@ services:
   backend:
     build: ./backend
     container_name: ruze-backend
+    ports:
+      - "${BACKEND_PORT:-8000}:${BACKEND_PORT:-8000}"
     volumes:
       # Mount your model files here
       - ./model:/app/model:ro
